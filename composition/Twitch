@@ -143,7 +143,7 @@
             "id": "browser_source",
             "versioned_id": "browser_source",
             "settings": {
-                "url": ""
+                "url": "https://dashboard.twitch.tv/widgets/alertbox#eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbGVydF9zZXRfaWQiOiI0MWUxYjQ0MS0yNTMyLTQ2MmEtYjUwOC1iY2Q2MjExNGNkYTEiLCJ1c2VyX2lkIjoiMTA0ODA5OTgzMSJ9.hD1V08XHKUYXG3LDdWxNbB3QZkcHzb15S6mwiEH27QI"
             },
             "mixers": 255,
             "sync": 0,
@@ -456,7 +456,7 @@
             "id": "browser_source",
             "versioned_id": "browser_source",
             "settings": {
-                "url": "",
+                "url": "https://dashboard.twitch.tv/widgets/goal/boris_bodin",
                 "width": 1480,
                 "height": 160
             },
@@ -601,7 +601,7 @@
             "id": "browser_source",
             "versioned_id": "browser_source",
             "settings": {
-                "url": "",
+                "url": "https://boris-bodin.github.io/twitch-overlay/",
                 "width": 1600,
                 "height": 900,
                 "css": ""
