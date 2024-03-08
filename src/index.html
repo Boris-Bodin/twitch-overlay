@@ -1,51 +1,150 @@
 <html>
-    <style>
-        html, body {
-            height: 100%;
-            width: 100%;
-        }
-        body {
-            position: relative;
-            background-image: url('./background.webp');
-        }
+<style>
+    @import url(//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css);
 
-        .screen {
+    * {
+        box-sizing: border-box;
+    }
 
-        }
+    html, body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        margin: 0;
+        --border-size: 5px;
+    }
 
-        .goals {
+    body {
+        position: relative;
+        background-image: url('./background.webp');
+        background-size: auto;
+        display: flex;
+    }
 
-        }
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+    }
 
-        .socials {
+    .left {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+    }
 
-        }
+    .right {
+        display: flex;
+        /*flex-basis: 20%;*/
+        flex-direction: column;
+    }
 
-        .cam {
+    .screen {
+        flex: 1 1 auto;
+    }
 
-        }
+    .goals {
+        --goals-ration: 0.75;
+        margin: 40px auto;
+        width: auto;
+        height: auto;
+        max-width: calc(1480px * var(--goals-ration));
+        max-height: calc(160px * var(--goals-ration));
+    }
 
-        .alertes {
-            position: absolute;
+    .cam {
+        min-height: 225px;
+        min-width: 355px;
+    }
 
-        }
-        
-    </style>
-    <body>
-        <div class="left">
-            <div class="screen">
+    .socials {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 40px 0;
+    }
 
-            </div>
-            <iframe class="goals" src="https://dashboard.twitch.tv/widgets/goal/boris_bodin"></iframe>    
+
+    .social {
+        border-radius: 5px;
+        box-shadow: 0 0 10px 0 #000000;
+        margin: 2px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .social > span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+        white-space: nowrap;
+        color: #FFF;
+        background: var(--social-color);
+        border-radius: 0 5px 5px 0
+    }
+
+    .social > i {
+        padding: 13px;
+        line-height: 1em;
+        display: flex;
+        border-radius: 5px 0 0 5px;
+        position: relative;
+        width: 50px;
+        font-size: 1.25em;
+        color: #fff;
+        background: #212121
+    }
+
+    .social > i:after {
+        content: "";
+        border: 8px solid;
+        border-color: transparent transparent transparent #222;
+        position: absolute;
+        top: 13px;
+        right: -15px
+    }
+
+    .social-twitter {
+        --social-color: #1da1f2;
+    }
+
+    .social-linkedin {
+        --social-color: #0077b5;
+    }
+
+    .social-twitch {
+        --social-color: #6441a5;
+    }
+
+    .social-medium {
+        --social-color: #00ab6c;
+    }
+
+
+</style>
+<body>
+<div class="container">
+    <div class="left">
+        <div class="screen">
+
         </div>
-        <div class="left">
-            <div class="socials">
-
-            </div>
-            <div class="cam">
-
-            </div>
+        <iframe class="goals" frameborder="0" src="https://dashboard.twitch.tv/widgets/goal/boris_bodin"></iframe>
+    </div>
+    <div class="right">
+        <div class="socials">
+            <div class="social social-twitter"><i class="fa-brands fa-twitter"></i><span>@BorisBodin</span></div>
+            <div class="social social-twitch"><i class="fa-brands fa-twitch"></i><span>Boris_Bodin</span></div>
+            <div class="social social-medium"><i class="fa-brands fa-medium-m"></i><span>@boris.bodin</span></div>
+            <div class="social social-linkedin"><i class="fa-brands fa-linkedin"></i><span>boris-bodin</span></div>
         </div>
-        <iframe class="alertes" src="https://dashboard.twitch.tv/widgets/alertbox#eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbGVydF9zZXRfaWQiOiI0MWUxYjQ0MS0yNTMyLTQ2MmEtYjUwOC1iY2Q2MjExNGNkYTEiLCJ1c2VyX2lkIjoiMTA0ODA5OTgzMSJ9.hD1V08XHKUYXG3LDdWxNbB3QZkcHzb15S6mwiEH27QI"></iframe>
-    </body>
+        <div class="cam">
+
+        </div>
+    </div>
+</div>
+</body>
 </html>
